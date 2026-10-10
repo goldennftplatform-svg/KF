@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#171713" />
+    <meta
+      name="description"
+      content="One creator. No limits. PRESET RECORDS is the independent home of Kountry Folk and PRESET. Original voice, new worlds. Listen to the music and watch the films."
+    />
+    <meta
+      property="og:title"
+      content="PRESET RECORDS — Human roots. Wild possibilities."
+    />
+    <meta
+      property="og:description"
+      content="Meet Kountry Folk. Discover PRESET. Original music and artist worlds from one independent creator."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://goldennftplatform-svg.github.io/KF/media/diesel-cover.webp"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>PRESET RECORDS — Kountry Folk & PRESET</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="Preset Records home"
+        ><span class="record-mark" aria-hidden="true"><i></i></span
+        ><span>PRESET<small>RECORDS</small></span></a
+      >
+      <nav aria-label="Main navigation">
+        <a href="#music">THE MUSIC</a><a href="#artists">THE ARTISTS</a
+        ><a href="#label">THE LABEL</a>
+      </nav>
+      <a class="header-cta" href="#lab">GET KOUNTRY FOLKED <span>↗</span></a>
+      <button
+        class="menu-toggle"
+        aria-expanded="false"
+        aria-label="Open navigation"
+      >
+        ☰
+      </button>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <img
+          class="hero-poster"
+          src="./media/hero.webp"
+          alt="Kountry Folk in a weathered cowboy hat, lit by the last light of a country sunset"
+          fetchpriority="high"
+        />
+        <video
+          class="hero-video"
+          muted
+          loop
+          playsinline
+          preload="none"
+          poster="./media/hero.webp"
+          aria-hidden="true"
+          tabindex="-1"
+        >
+          <source src="./media/kountry-loop.mp4" type="video/mp4" />
+        </video>
+        <div class="hero-shade"></div>
+        <div class="hero-topline">
+          <span
+            ><i class="live-dot"></i> INDEPENDENT SPIRIT. UNLIMITED SOUND.</span
+          ><span>PRESET RECORDS PRESENTS — VOL. 001</span>
+        </div>
+        <div class="hero-content">
+          <p class="eyebrow">A LITTLE DIRT. A DIFFERENT BREED.</p>
+          <h1 id="hero-title">
+            KOUNTRY<br /><span>FOLK.</span
+            ><svg class="hero-star" viewBox="0 0 100 100" aria-hidden="true">
+              <path
+                d="M50 0 59 35 85 15 65 41 100 50 65 59 85 85 59 65 50 100 41 65 15 85 35 59 0 50 35 41 15 15 41 35Z"
+              />
+            </svg>
+          </h1>
+          <p class="hero-description">
+            Backroad soul. Rule-breaking sound.<br />Straight from the voice
+            behind PRESET RECORDS.
+          </p>
+          <div class="hero-actions">
+            <button class="button orange" data-play="0">
+              <span class="play-triangle">▶</span> TURN IT UP</button
+            ><button
+              class="text-button"
+              data-video="g2eb1S1GKiI"
+              data-title="Diesel n’ Diamonds"
+            >
+              WATCH THE FILM <span>↗</span>
+            </button>
+          </div>
+        </div>
+        <div class="hero-bottom">
+          <span>HUMAN ROOTS.<br /><b>WILD POSSIBILITIES.</b></span
+          ><a href="#music" class="scroll-cue"
+            >SCROLL TO DISCOVER <span>↓</span></a
+          ><button class="motion-toggle" aria-label="Play background video">
+            ▶ MOTION
+          </button>
+        </div>
+        <div class="hero-caption">
+          <span>01 / THE KOUNTRY CHAPTER</span
+          ><span>ORIGINAL VOICE. NEW FRONTIERS.</span>
+        </div>
+      </section>
+
+      <div class="ticker" aria-hidden="true">
+        <div>
+          KOUNTRY FOLK <span>✳</span> PRESET RECORDS <span>✳</span> MADE FROM
+          SOMETHING REAL <span>✳</span> NO GENRE FENCES <span>✳</span> KOUNTRY
+          FOLK <span>✳</span> PRESET RECORDS <span>✳</span>
+        </div>
+      </div>
+
+      <section id="music" class="section music-section">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow orange-text">01 / THE ROTATION</p>
+            <h2>GOOD MUSIC.<br /><span class="muted">NO FENCES.</span></h2>
+          </div>
+          <div class="heading-aside">
+            <p>
+              Four tracks. One hell of an introduction.<br />Find your backroad
+              anthem.
+            </p>
+            <div
+              class="filters"
+              role="group"
+              aria-label="Filter music by artist"
+            >
+              <button class="active" data-filter="kountry" aria-pressed="true">
+                KOUNTRY FOLK <span>04</span></button
+              ><button data-filter="preset" aria-pressed="false">
+                PRESET <span>03</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="release-grid" id="release-grid"></div>
+        <div class="music-footnote">
+          <span
+            ><i class="live-dot"></i> DIRECT FROM THE INDEPENDENT CATALOG</span
+          ><span>WRITTEN IN THE SPIRIT OF DOING IT YOUR OWN WAY. ↗</span>
+        </div>
+      </section>
+
+      <section class="film-section section" id="films">
+        <div class="section-heading compact">
+          <div>
+            <p class="eyebrow orange-text">02 / SOUND, MEET VISION</p>
+            <h2>SEE THE SOUND.</h2>
+          </div>
+          <a
+            href="https://www.youtube.com/@preseteth"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-button"
+            >THE YOUTUBE CHANNEL ↗</a
+          >
+        </div>
+        <div class="film-grid">
+          <button
+            class="film-card"
+            data-video="g2eb1S1GKiI"
+            data-title="Diesel n’ Diamonds"
+          >
+            <img
+              src="./media/truck.webp"
+              loading="lazy"
+              alt="Kountry Folk beside his truck at golden hour"
+            /><span class="film-tag">KOUNTRY FOLK / MUSIC VIDEO</span
+            ><span class="film-play" aria-hidden="true">▶</span
+            ><span class="film-title">DIESEL N’ DIAMONDS <span>↗</span></span>
+          </button>
+          <button
+            class="film-card preset-film"
+            data-video="m83cjSP6rQE"
+            data-title="Hard Work"
+          >
+            <img
+              src="https://i.ytimg.com/vi/m83cjSP6rQE/hqdefault.jpg"
+              loading="lazy"
+              alt="Hard Work music video"
+            /><span class="film-tag">PRESET / MUSIC VIDEO</span
+            ><span class="film-play" aria-hidden="true">▶</span
+            ><span class="film-title">HARD WORK <span>↗</span></span>
+          </button>
+        </div>
+      </section>
+
+      <section class="artists-section section" id="artists">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">03 / THE ROSTER</p>
+            <h2>TWO WORLDS.<br />ONE ORIGINAL.</h2>
+          </div>
+          <p class="roster-intro">
+            Same creator. Same restless soul.<br />Different ways to turn it all
+            the way up.
+          </p>
+        </div>
+        <div class="artist-grid">
+          <article class="artist-card country-artist">
+            <img
+              src="./media/kountry-portrait.webp"
+              loading="lazy"
+              alt="Kountry Folk seated on a case beside a muddy pickup"
+            /><span class="artist-index">ARTIST 001</span>
+            <div class="artist-info">
+              <p class="eyebrow">BACKROAD SOUL / COUNTRY ATTITUDE</p>
+              <h3>KOUNTRY FOLK</h3>
+              <p>
+                Dust on the boots. A hook in your head. Country with its own
+                fingerprints, built from original vocals and a refusal to stay
+                in one lane.
+              </p>
+              <a href="#music" data-artist="kountry"
+                >MEET YOUR NEXT LOUD DRIVE <span>↗</span></a
+              >
+            </div>
+          </article>
+          <article class="artist-card preset-artist">
+            <img
+              src="./media/preset.webp"
+              loading="lazy"
+              alt="PRESET at the decks in a blue-lit recording studio"
+            /><span class="artist-index">ARTIST 002</span>
+            <div class="artist-info">
+              <p class="eyebrow">BEAT-DRIVEN / GENRE-FREE</p>
+              <h3>PRESET</h3>
+              <p>
+                The other side of the frequency. Late-night energy, unexpected
+                turns, and the sound of a creator following an idea wherever it
+                goes.
+              </p>
+              <a href="#music" data-artist="preset"
+                >CHANGE THE FREQUENCY <span>↗</span></a
+              >
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="label-section section" id="label">
+        <div class="label-symbol" aria-hidden="true">
+          <span class="record-mark"><i></i></span>
+          <p>ORIGINAL VOICE<br />INDEPENDENT VISION</p>
+        </div>
+        <div class="label-copy">
+          <p class="eyebrow orange-text">04 / BEHIND THE RECORD</p>
+          <h2>ONE VOICE.<br />ANY <em>PERSONA.</em></h2>
+          <p class="label-lead">
+            The voice is mine.<br />The possibilities are wide open.
+          </p>
+          <p>
+            PRESET RECORDS is the home for everything I make. It starts with me
+            singing, recording samples, and chasing a feeling. From there, I
+            build the songs, the characters, and the worlds they live in.
+          </p>
+          <p>
+            Kountry Folk and PRESET are two sides of that same story. Human-led.
+            AI-expanded. Made with a creator’s hands on the wheel.
+          </p>
+          <div class="label-signoff">
+            <span
+              >PRESET<span class="signature-line">
+                / FOUNDER & CREATOR</span
+              ></span
+            ><span class="label-stamp">NO GENRE<br />FENCES ↗</span>
+          </div>
+          <div class="bagpipes-note">
+            <span>IN THE TOOLKIT</span><b>BAGPIPES</b>
+            <p>
+              A creator-friendly part of the process. Original ideas come first.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="lab-section section" id="lab">
+        <div>
+          <p class="eyebrow">THE NEXT CHAPTER / VOICE LAB</p>
+          <h2>GET KOUNTRY<br /><span>FOLKED.</span> ↗</h2>
+          <p>
+            Your voice. A little backroad attitude.<br />The future starts with
+            a sample.
+          </p>
+        </div>
+        <div class="lab-panel">
+          <span class="lab-badge"
+            >LOCAL SAMPLE CHECK · GENERATION COMING LATER</span
+          >
+          <h3>EVERY PERSONA<br />STARTS SOMEWHERE.</h3>
+          <p>
+            Try a voice sample from your device. Preview it here, then imagine
+            where it could go.
+          </p>
+          <label class="upload-button" for="voice-file"
+            ><span>↥</span> CHOOSE YOUR VOICE SAMPLE<input
+              id="voice-file"
+              type="file"
+              accept="audio/*,.mp3,.wav,.m4a,.ogg,.flac"
+          /></label>
+          <p class="lab-privacy">
+            Audio only · up to 20 MB · stays on your device<br />No upload. No
+            AI generation. No credits used.
+          </p>
+          <div id="sample-preview" hidden>
+            <p id="sample-name"></p>
+            <audio id="sample-audio" controls></audio
+            ><button id="clear-sample" class="text-button">
+              REMOVE SAMPLE ×
+            </button>
+          </div>
+          <p id="sample-status" role="status" aria-live="polite"></p>
+        </div>
+      </section>
+      <footer class="site-footer">
+        <a class="brand" href="#"
+          ><span class="record-mark" aria-hidden="true"><i></i></span
+          ><span>PRESET<small>RECORDS</small></span></a
+        >
+        <p>HUMAN ROOTS. WILD POSSIBILITIES.</p>
+        <div>
+          <a
+            href="https://www.youtube.com/@preseteth"
+            target="_blank"
+            rel="noopener noreferrer"
+            >YOUTUBE ↗</a
+          ><a href="#label">THE STORY ↗</a
+          ><small>© <span id="year">2026</span> PRESET RECORDS</small>
+        </div>
+      </footer>
+    </main>
+
+    <aside class="player" aria-label="Music player">
+      <div class="now-playing">
+        <img
+          id="player-art"
+          src="./media/diesel-cover.webp"
+          alt="Current track artwork"
+        />
+        <div>
+          <span id="player-artist">KOUNTRY FOLK</span
+          ><strong id="player-title">Diesel n’ Diamonds</strong>
+        </div>
+        <span class="equalizer" aria-hidden="true"
+          ><i></i><i></i><i></i><i></i
+        ></span>
+      </div>
+      <div class="transport">
+        <button id="previous" aria-label="Previous track">⏮</button
+        ><button
+          id="play-toggle"
+          class="player-play"
+          aria-label="Play Diesel n’ Diamonds"
+        >
+          ▶</button
+        ><button id="next" aria-label="Next track">⏭</button>
+      </div>
+      <div class="seek-wrap">
+        <span id="elapsed">0:00</span
+        ><input
+          id="seek"
+          type="range"
+          min="0"
+          max="100"
+          step="0.1"
+          value="0"
+          aria-label="Seek in track"
+        /><span id="duration">—:—</span>
+      </div>
+      <div class="player-end">
+        <button id="mute" aria-label="Mute audio">♪</button
+        ><input
+          id="volume"
+          type="range"
+          min="0"
+          max="1"
+          step="0.05"
+          value="0.8"
+          aria-label="Volume"
+        /><span>PRESET RECORDS ↗</span>
+      </div>
+      <audio id="music-audio" preload="none"></audio
+      ><span id="player-status" class="sr-only" role="status"></span>
+    </aside>
+
+    <dialog id="video-dialog" aria-labelledby="video-title">
+      <div class="dialog-top">
+        <h2 id="video-title">Music video</h2>
+        <button id="close-video" aria-label="Close video">✕</button>
+      </div>
+      <div id="video-container"></div>
+      <a id="video-external" target="_blank" rel="noopener noreferrer"
+        >WATCH ON YOUTUBE ↗</a
+      >
+    </dialog>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

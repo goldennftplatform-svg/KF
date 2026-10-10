@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.scratch/
+.playwright-mcp/
+.env
+.env.*
+!.env.example
+*.log
+__pycache__/
