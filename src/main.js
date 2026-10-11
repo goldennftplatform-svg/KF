@@ -256,10 +256,29 @@ if ("mediaSession" in navigator) {
 }
 
 const dialog = document.querySelector("#video-dialog");
-function openVideo(id, title) {
+function openVideo(id, title, local = false) {
   audio.pause();
   sample.pause();
   document.querySelector("#video-title").textContent = title;
+  const external = document.querySelector("#video-external");
+  if (local) {
+    const video = document.createElement("video");
+    video.src = media(id);
+    video.poster = media("l-in-love.webp");
+    video.controls = true;
+    video.playsInline = true;
+    video.preload = "metadata";
+    video.setAttribute("aria-label", `${title} — music video`);
+    document.querySelector("#video-container").replaceChildren(video);
+    external.href = media(id);
+    external.textContent = "OPEN VIDEO IN NEW TAB ↗";
+    dialog.showModal();
+    document.body.classList.add("dialog-open");
+    video.play().catch(() => {
+      /* Native controls remain available if autoplay is blocked. */
+    });
+    return;
+  }
   const iframe = document.createElement("iframe");
   iframe.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1`;
   iframe.title = `${title} — music video`;
@@ -268,6 +287,7 @@ function openVideo(id, title) {
   iframe.referrerPolicy = "strict-origin-when-cross-origin";
   document.querySelector("#video-container").replaceChildren(iframe);
   document.querySelector("#video-external").href = `https://youtu.be/${id}`;
+  external.textContent = "WATCH ON YOUTUBE ↗";
   dialog.showModal();
   document.body.classList.add("dialog-open");
 }
@@ -275,6 +295,12 @@ document
   .querySelector("#close-video")
   .addEventListener("click", () => dialog.close());
 dialog.addEventListener("close", () => {
+  const localVideo = document.querySelector("#video-container video");
+  if (localVideo) {
+    localVideo.pause();
+    localVideo.removeAttribute("src");
+    localVideo.load();
+  }
   document.querySelector("#video-container").replaceChildren();
   document.body.classList.remove("dialog-open");
 });
@@ -293,10 +319,13 @@ dialog.addEventListener("click", (event) => {
 document.addEventListener("click", (event) => {
   const play = event.target.closest("[data-play]");
   const video = event.target.closest("[data-video]");
+  const localVideo = event.target.closest("[data-local-video]");
   const filterButton = event.target.closest("[data-filter]");
   const artist = event.target.closest("[data-artist]");
   if (play) playTrack(Number(play.dataset.play));
   if (video) openVideo(video.dataset.video, video.dataset.title);
+  if (localVideo)
+    openVideo(localVideo.dataset.localVideo, localVideo.dataset.title, true);
   if (filterButton) setFilter(filterButton.dataset.filter);
   if (artist) setFilter(artist.dataset.artist);
 });

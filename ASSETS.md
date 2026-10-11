@@ -14,20 +14,22 @@ All derivatives omit source EXIF metadata. Original photographs remain untouched
 
 ## Music and persona assets
 
+`l-in-love.mp4` is a web-optimized H.264/AAC derivative of the owner's `Downloads/L-in-Love.mp4` (224.72 seconds). `l-in-love.webp` is a still from 12 seconds. The video plays locally in the site's video modal; the original file is unchanged.
+
 Only explicitly selected music and creative artwork from the owner's Downloads directory are included.
 
-| Website asset                            | Source                                                                            |
-| ---------------------------------------- | --------------------------------------------------------------------------------- |
+| Website asset                            | Source                                                                                               |
+| ---------------------------------------- | ---------------------------------------------------------------------------------------------------- |
 | diesel-n-diamonds-youtube.mp3            | Audio from the owner's current YouTube release g2eb1S1GKiI, 216.4 seconds; replaces the old download |
-| feels-right.mp3                          | bagpipes-Feels-Right.mp3                                                          |
-| party-in-the-pines.mp3                   | bagpipes-Party-in-the-Pines.mp3                                                   |
-| hi-and-dry.mp3                           | bagpipes-High-n-Dry.mp3                                                           |
-| static-in.mp3                            | bagpipes-Static-In.mp3                                                            |
-| choosin-fun.mp3                          | bagpipes-Choosin-Fun.mp3                                                          |
-| diesel-cover.webp, kountry-portrait.webp | Diesel N’ Diamonds at Sunset.png; portrait is a crop                              |
-| hero.webp, pines.webp, kountry-loop.mp4  | bagpipes-need-a-promo-video-for-these.mp4; stills and a muted five-second excerpt |
-| truck.webp                               | bagpipes-music-video-for-this-hook-show.mp4; still at one second                  |
-| preset.webp                              | bagpipes-show-a-dj-in-the-studios.mp4; still at nine seconds                      |
+| feels-right.mp3                          | bagpipes-Feels-Right.mp3                                                                             |
+| party-in-the-pines.mp3                   | bagpipes-Party-in-the-Pines.mp3                                                                      |
+| hi-and-dry.mp3                           | bagpipes-High-n-Dry.mp3                                                                              |
+| static-in.mp3                            | bagpipes-Static-In.mp3                                                                               |
+| choosin-fun.mp3                          | bagpipes-Choosin-Fun.mp3                                                                             |
+| diesel-cover.webp, kountry-portrait.webp | Diesel N’ Diamonds at Sunset.png; portrait is a crop                                                 |
+| hero.webp, pines.webp, kountry-loop.mp4  | bagpipes-need-a-promo-video-for-these.mp4; stills and a muted five-second excerpt                    |
+| truck.webp                               | bagpipes-music-video-for-this-hook-show.mp4; still at one second                                     |
+| preset.webp                              | bagpipes-show-a-dj-in-the-studios.mp4; still at nine seconds                                         |
 
 Audio derivatives use 160 kbps MP3 with metadata removed. Source files are unchanged. Artwork for tracks other than Diesel n’ Diamonds is website art direction combining these stills with live typography, rather than a claim that original single artwork was supplied.
 

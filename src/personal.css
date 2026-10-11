@@ -1,4 +1,26 @@
 /* Personal edition: warm paper, real photographs, and room to breathe. */
+.film-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.film-title {
+  font-size: 25px;
+}
+#video-container video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #000;
+}
+@media (max-width: 1000px) and (min-width: 761px) {
+  .film-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 760px) {
+  .film-grid {
+    grid-template-columns: 1fr;
+  }
+}
 .collect-button {
   display: flex;
   align-items: center;
