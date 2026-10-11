@@ -12,7 +12,9 @@ def ff(*args):
     subprocess.run(['ffmpeg', '-hide_banner', '-loglevel', 'error', '-y', *map(str, args)], check=True)
 
 def prepare():
-    songs = {'diesel-n-diamonds': 'bagpipes-Diesel-and-Diamonds.mp3', 'feels-right': 'bagpipes-Feels-Right.mp3', 'party-in-the-pines': 'bagpipes-Party-in-the-Pines.mp3', 'hi-and-dry': 'bagpipes-High-n-Dry.mp3', 'static-in': 'bagpipes-Static-In.mp3', 'choosin-fun': 'bagpipes-Choosin-Fun.mp3'}
+    # Diesel uses the owner's current YouTube release g2eb1S1GKiI.
+    # Its committed derivative is maintained separately; do not restore the old Downloads master.
+    songs = {'feels-right': 'bagpipes-Feels-Right.mp3', 'party-in-the-pines': 'bagpipes-Party-in-the-Pines.mp3', 'hi-and-dry': 'bagpipes-High-n-Dry.mp3', 'static-in': 'bagpipes-Static-In.mp3', 'choosin-fun': 'bagpipes-Choosin-Fun.mp3'}
     for name, source in songs.items():
         ff('-i', SOURCE / source, '-map_metadata', '-1', '-c:a', 'libmp3lame', '-b:a', '160k', OUT / f'{name}.mp3')
     im = Image.open(SOURCE / 'Diesel N’ Diamonds at Sunset.png').convert('RGB')

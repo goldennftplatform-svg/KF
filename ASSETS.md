@@ -18,7 +18,7 @@ Only explicitly selected music and creative artwork from the owner's Downloads d
 
 | Website asset                            | Source                                                                            |
 | ---------------------------------------- | --------------------------------------------------------------------------------- |
-| diesel-n-diamonds.mp3                    | bagpipes-Diesel-and-Diamonds.mp3                                                  |
+| diesel-n-diamonds-youtube.mp3            | Audio from the owner's current YouTube release g2eb1S1GKiI, 216.4 seconds; replaces the old download |
 | feels-right.mp3                          | bagpipes-Feels-Right.mp3                                                          |
 | party-in-the-pines.mp3                   | bagpipes-Party-in-the-Pines.mp3                                                   |
 | hi-and-dry.mp3                           | bagpipes-High-n-Dry.mp3                                                           |
@@ -36,6 +36,6 @@ YouTube oEmbed verified titles:
 - `g2eb1S1GKiI`: Diesel n’ Diamonds — PreSet Pro
 - `m83cjSP6rQE`: Hard Work — PreSet Pro
 
-Hard Work is presented as a video because the similarly named local `hardd` files have not been verified as its release master. The six audio selections use the unnumbered matching filenames; the owner can replace these with preferred alternate masters later.
+Hard Work is presented as a video because the similarly named local `hardd` files have not been verified as its release master. The other five audio selections use the unnumbered matching filenames. Diesel n’ Diamonds uses audio extracted directly from the supplied YouTube release, as corrected by the owner.
 
 User-facing title “Hi & Dry” follows the requested catalog wording; its source filename uses “High-n-Dry.” No Suno profile or Bagpipes artist URL was provided, so none is invented. Bagpipes is credited as a creative tool, not a sponsor or formal partner.

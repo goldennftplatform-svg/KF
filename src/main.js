@@ -7,7 +7,7 @@ const tracks = [
     title: "Diesel n’ Diamonds",
     artist: "KOUNTRY FOLK",
     group: "kountry",
-    file: "diesel-n-diamonds.mp3",
+    file: "diesel-n-diamonds-youtube.mp3",
     art: "diesel-cover.webp",
     style: "diesel",
     note: "DIRT-ROAD LUXURY",
