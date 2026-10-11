@@ -24,7 +24,13 @@ Production: `npm run build`; test production locally with `npm run preview`.
 
 Track metadata lives in `src/main.js`. Page copy lives in `index.html`. Visuals and music are in `public/media`. See `ASSETS.md` for provenance and editorial choices. Assets belong to the project owner; no license to redistribute the catalog is granted by this repository.
 
-## Hosting
+## Collecting releases
+
+The country release cards link directly to their verified Bagpipes track pages. Three editions were confirmed through Bagpipes' public track/edition queries on 2026-10-11: Diesel n’ Diamonds (token 5), Feels Right (6), and Party in the Pines (7). Hi & Dry has a verified track page, but its edition query returned null, so its button says “View on Bagpipes.” Update `nftEdition` in `src/main.js` when its edition is confirmed. Prices and remaining supply are deliberately left to Bagpipes checkout to avoid stale quotes.
+
+The purchase handoff opens Bagpipes in a new tab. Wallet connection, payment, and mint confirmation happen there; no wallet credentials or transactions are handled by this site.
+
+## Deployment
 
 The GitHub Actions workflow builds and deploys to GitHub Pages on pushes to `main`. Enable **Settings → Pages → Source → GitHub Actions**. Relative asset URLs support both `/KF/` and a custom-domain root.
 

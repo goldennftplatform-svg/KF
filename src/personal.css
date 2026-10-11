@@ -1,4 +1,77 @@
 /* Personal edition: warm paper, real photographs, and room to breathe. */
+.collect-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 12px 8px;
+  margin-top: 20px;
+  background: #29372e;
+  color: #fff9ed;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+  border: 1px solid #29372e;
+}
+.collect-button:hover {
+  background: #b9512e;
+  border-color: #b9512e;
+}
+.collect-button.secondary {
+  background: transparent;
+  color: #29372e;
+}
+.collect-button.secondary:hover {
+  background: #dfe3d4;
+}
+.collect-caption {
+  font-size: 9px;
+  color: #646e5d;
+  line-height: 1.5;
+  margin-top: 8px;
+}
+.collect-guide {
+  margin-top: 38px;
+  padding: 25px;
+  background: #e5e9dc;
+  border: 1px solid #29372e26;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 30px;
+}
+.collect-guide h3 {
+  font-family: var(--display);
+  font-size: 28px;
+  line-height: 1;
+  margin-top: 10px;
+}
+.collect-guide > p {
+  font-size: 12px;
+  color: #54604e;
+  line-height: 1.8;
+}
+.collect-guide > span {
+  grid-column: 1/-1;
+  font-size: 8px;
+  letter-spacing: 1px;
+  color: #626b5c;
+}
+@media (max-width: 760px) {
+  .collect-button {
+    font-size: 8px;
+    letter-spacing: 0.2px;
+  }
+  .collect-caption {
+    font-size: 8px;
+  }
+  .collect-guide {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+  .collect-guide h3 {
+    font-size: 26px;
+  }
+}
 :root {
   --orange: #b9512e;
 }

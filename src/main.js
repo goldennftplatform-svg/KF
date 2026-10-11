@@ -12,6 +12,8 @@ const tracks = [
     style: "diesel",
     note: "DIRT-ROAD LUXURY",
     video: "g2eb1S1GKiI",
+    bagpipesSlug: "diesel-n-diamonds",
+    nftEdition: true,
   },
   {
     title: "Feels Right",
@@ -21,6 +23,8 @@ const tracks = [
     art: "hero.webp",
     style: "feels",
     note: "FOLLOW THAT FEELING",
+    bagpipesSlug: "feels-right-3",
+    nftEdition: true,
   },
   {
     title: "Party in the Pines",
@@ -30,6 +34,8 @@ const tracks = [
     art: "pines.webp",
     style: "pines",
     note: "TAKE IT OFF THE GRID",
+    bagpipesSlug: "party-in-the-pines-2",
+    nftEdition: true,
   },
   {
     title: "Hi & Dry",
@@ -39,6 +45,8 @@ const tracks = [
     art: "truck.webp",
     style: "dry",
     note: "A DIFFERENT KIND OF HIGH",
+    bagpipesSlug: "hi-dry-2",
+    nftEdition: false,
   },
   {
     title: "Static In",
@@ -89,6 +97,30 @@ function renderReleases() {
         : "",
     )
     .join("");
+  const visibleTracks = tracks.filter((track) => track.group === filter);
+  document.querySelectorAll(".release-card").forEach((card, index) => {
+    const track = visibleTracks[index];
+    if (!track.bagpipesSlug) return;
+    const link = document.createElement("a");
+    link.className = `collect-button${track.nftEdition ? "" : " secondary"}`;
+    link.href = `https://bagpipes.studio/track/${track.bagpipesSlug}`;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    link.textContent = track.nftEdition
+      ? "BUY / COLLECT NFT ↗"
+      : "VIEW ON BAGPIPES ↗";
+    link.setAttribute(
+      "aria-label",
+      `${track.nftEdition ? "Buy or collect" : "View"} ${track.title} on Bagpipes (opens in a new tab)`,
+    );
+    const note = document.createElement("p");
+    note.className = "collect-caption";
+    note.textContent = track.nftEdition
+      ? "Fan edition · checkout on Bagpipes"
+      : "Check edition availability on Bagpipes";
+    card.append(link, note);
+  });
+  document.querySelector("#collect-guide").hidden = filter !== "kountry";
 }
 
 function setFilter(value) {
