@@ -1,4 +1,5 @@
 import "./style.css";
+import "./personal.css";
 
 const media = (file) => `${import.meta.env.BASE_URL}media/${file}`;
 const tracks = [
@@ -284,44 +285,6 @@ document.querySelectorAll(".site-header a").forEach((link) =>
     if (menu.getAttribute("aria-expanded") === "true") menu.click();
   }),
 );
-
-const background = document.querySelector(".hero-video");
-const motion = document.querySelector(".motion-toggle");
-const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
-let motionEnabled = !reducedMotion.matches && !navigator.connection?.saveData;
-function syncMotion() {
-  motion.textContent = background.paused ? "▶ MOTION" : "Ⅱ MOTION";
-  motion.setAttribute(
-    "aria-label",
-    `${background.paused ? "Play" : "Pause"} background video`,
-  );
-}
-background.addEventListener("play", syncMotion);
-background.addEventListener("pause", syncMotion);
-motion.addEventListener("click", async () => {
-  motionEnabled = background.paused;
-  if (motionEnabled) {
-    try {
-      await background.play();
-    } catch {
-      syncMotion();
-    }
-  } else background.pause();
-});
-new IntersectionObserver(
-  ([entry]) => {
-    if (entry.isIntersecting && motionEnabled)
-      background.play().catch(syncMotion);
-    else background.pause();
-  },
-  { threshold: 0.05 },
-).observe(document.querySelector(".hero"));
-reducedMotion.addEventListener("change", (event) => {
-  if (event.matches) {
-    motionEnabled = false;
-    background.pause();
-  }
-});
 
 let sampleUrl;
 const fileInput = document.querySelector("#voice-file");

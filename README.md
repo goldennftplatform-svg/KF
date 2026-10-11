@@ -13,10 +13,11 @@ Production: `npm run build`; test production locally with `npm run preview`.
 
 ## Included
 
-- Cinematic country hero using an optimized excerpt of the owner's promo footage, with reduced-motion and data-saving handling.
+- Warm, personal hero using the owner's real portrait, with a subtly keyed green-screen background. Country artwork stays with the music and Kountry Folk persona.
 - Six full playable tracks, artist filters, persistent audio transport, seek/volume controls, automatic next track, and Media Session integration.
 - Diesel n’ Diamonds and Hard Work YouTube films, loaded on click in an accessible modal.
 - Label story and two artist profiles.
+- Personal camera-roll section with the owner-supplied Steve Largent event photo and a candid headphones portrait.
 - Local-only voice-sample preview, limited to 20 MB. **This is not AI generation or an upload service.** The sample is never sent to a server, saved, or charged against any account.
 
 ## Content

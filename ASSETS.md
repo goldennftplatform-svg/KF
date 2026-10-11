@@ -1,5 +1,19 @@
 # Asset provenance
 
+## Personal edition
+
+`tools/personal_assets.py` creates web derivatives of the real photos the owner supplied in chat, matched to their local originals:
+
+- `creator-cutout.webp`: `IMG_20200623_081559_871.jpg`; green-screen key, close crop, 4.5% exposure lift, slight saturation reduction. No generative face edits.
+- `creator-smile.webp`: `IMG_20200623_081613_005.jpg`; green backdrop neutralized, gentle brightness lift.
+- `creator-workshop.webp`: `IMG_20190621_145506.jpg`; resized with subtle contrast/color adjustment.
+- `creator-headphones.webp`: `IMG_20190908_220546.jpg`; resized with subtle contrast/color adjustment.
+- `steve-largent.webp`: `20161217_140534.jpg`; EXIF orientation corrected, resized with subtle contrast/color adjustment. Steve Largent caption is supplied by the owner; the photo is presented as a personal memory, not an endorsement.
+
+All derivatives omit source EXIF metadata. Original photographs remain untouched.
+
+## Music and persona assets
+
 Only explicitly selected music and creative artwork from the owner's Downloads directory are included.
 
 | Website asset                            | Source                                                                            |
