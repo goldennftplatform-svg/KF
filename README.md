@@ -18,6 +18,7 @@ Production: `npm run build`; test production locally with `npm run preview`.
 - Diesel n’ Diamonds and Hard Work YouTube films, loaded on click in an accessible modal.
 - Label story and two artist profiles.
 - Personal camera-roll section with the owner-supplied Steve Largent event photo and a candid headphones portrait.
+- Compact Legacy Songs callout with 16 verified public songs from `suno.com/@presetrecords?page=songs`, playable through an official Suno embed on this page. The external player loads only on request; selecting another song replaces it, and starting site music or video stops it. The catalog is a snapshot maintained in `src/legacy.js`, not an automatic feed.
 - Local-only voice-sample preview, limited to 20 MB. **This is not AI generation or an upload service.** The sample is never sent to a server, saved, or charged against any account.
 
 ## Content

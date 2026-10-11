@@ -14,6 +14,8 @@ All derivatives omit source EXIF metadata. Original photographs remain untouched
 
 ## Music and persona assets
 
+The Legacy Songs section uses official `https://suno.com/embed/{song-id}` players for the 16 public songs verified on `https://suno.com/@presetrecords?page=songs` on 2026-10-11. IDs and titles are recorded in `src/legacy.js`. Audio is streamed by Suno's own player; no legacy audio is copied into this repository. Playback depends on Suno availability and its current embed policies. The profile's pinned “Pickin’ a Sky” is the initial selection.
+
 `l-in-love.mp4` is a web-optimized H.264/AAC derivative of the owner's `Downloads/L-in-Love.mp4` (224.72 seconds). `l-in-love.webp` is a still from 12 seconds. The video plays locally in the site's video modal; the original file is unchanged.
 
 Only explicitly selected music and creative artwork from the owner's Downloads directory are included.

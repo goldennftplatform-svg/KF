@@ -1,5 +1,6 @@
 import "./style.css";
 import "./personal.css";
+import { stopLegacy } from "./legacy.js";
 
 const media = (file) => `${import.meta.env.BASE_URL}media/${file}`;
 const tracks = [
@@ -78,6 +79,10 @@ const tracks = [
 ];
 const audio = document.querySelector("#music-audio");
 const sample = document.querySelector("#sample-audio");
+document.addEventListener("legacy-listen", () => {
+  audio.pause();
+  sample.pause();
+});
 const playToggle = document.querySelector("#play-toggle");
 const seek = document.querySelector("#seek");
 let current = 0;
@@ -149,6 +154,7 @@ async function playTrack(index, toggle = true) {
     return;
   }
   sample.pause();
+  stopLegacy();
   if (index !== current || !audio.getAttribute("src")) {
     current = index;
     const track = tracks[index];
@@ -257,6 +263,7 @@ if ("mediaSession" in navigator) {
 
 const dialog = document.querySelector("#video-dialog");
 function openVideo(id, title, local = false) {
+  stopLegacy();
   audio.pause();
   sample.pause();
   document.querySelector("#video-title").textContent = title;
@@ -385,7 +392,10 @@ fileInput.addEventListener("change", () => {
   sampleStatus.textContent =
     "Your sample is ready to preview. It stays in this browser; no generation has been run.";
 });
-sample.addEventListener("play", () => audio.pause());
+sample.addEventListener("play", () => {
+  audio.pause();
+  stopLegacy();
+});
 sample.addEventListener("error", () => {
   if (sampleUrl)
     sampleStatus.textContent =
