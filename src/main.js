@@ -1,6 +1,8 @@
 import "./style.css";
 import "./personal.css";
+import "./holiday.css";
 import { stopLegacy } from "./legacy.js";
+import holiday from "./holiday-data.json";
 
 const media = (file) => `${import.meta.env.BASE_URL}media/${file}`;
 const tracks = [
@@ -77,6 +79,57 @@ const tracks = [
     video: "m83cjSP6rQE",
   },
 ];
+const holidayStart = tracks.length;
+tracks.push(...holiday.tracks);
+document.querySelectorAll("[data-album-play]").forEach((button) => {
+  button.dataset.play = String(holidayStart);
+});
+const holidayList = document.querySelector("#holiday-tracklist");
+holiday.tracks.forEach((track, index) => {
+  const li = document.createElement("li");
+  li.className = "holiday-track";
+  li.dataset.trackIndex = String(holidayStart + index);
+  const button = document.createElement("button");
+  button.className = "holiday-track-play";
+  button.dataset.play = String(holidayStart + index);
+  button.setAttribute("aria-label", `Play ${track.title}`);
+  const number = document.createElement("span");
+  number.className = "holiday-track-number";
+  number.textContent = String(index + 1).padStart(2, "0");
+  const image = document.createElement("img");
+  image.src = media(track.art);
+  image.alt = "";
+  image.loading = "lazy";
+  image.width = 44;
+  image.height = 44;
+  const title = document.createElement("span");
+  title.className = "holiday-track-title";
+  const name = document.createElement("strong");
+  name.textContent = track.title;
+  const artist = document.createElement("small");
+  artist.textContent = `${track.artist} / GONE KRISTMAS`;
+  title.append(name, artist);
+  const duration = document.createElement("span");
+  duration.className = "holiday-track-duration";
+  duration.textContent = `${Math.floor(track.duration / 60)}:${String(track.duration % 60).padStart(2, "0")}`;
+  const icon = document.createElement("span");
+  icon.className = "holiday-track-icon";
+  icon.textContent = "▶";
+  icon.setAttribute("aria-hidden", "true");
+  button.append(number, image, title, duration, icon);
+  const link = document.createElement("a");
+  link.className = "holiday-track-link";
+  link.href = `https://bagpipes.studio/track/${track.bagpipesSlug}`;
+  link.target = "_blank";
+  link.rel = "noopener noreferrer";
+  link.textContent = "↗";
+  link.setAttribute(
+    "aria-label",
+    `View ${track.title} on Bagpipes (opens in a new tab)`,
+  );
+  li.append(button, link);
+  holidayList.append(li);
+});
 const audio = document.querySelector("#music-audio");
 const sample = document.querySelector("#sample-audio");
 document.addEventListener("legacy-listen", () => {
@@ -85,7 +138,7 @@ document.addEventListener("legacy-listen", () => {
 });
 const playToggle = document.querySelector("#play-toggle");
 const seek = document.querySelector("#seek");
-let current = 0;
+let current = holidayStart;
 let filter = "kountry";
 let request = 0;
 audio.volume = 0.8;
@@ -93,6 +146,38 @@ const time = (seconds) =>
   Number.isFinite(seconds)
     ? `${Math.floor(seconds / 60)}:${String(Math.floor(seconds % 60)).padStart(2, "0")}`
     : "—:—";
+document.querySelector("#player-title").textContent = tracks[current].title;
+document.querySelector("#player-artist").textContent =
+  `${tracks[current].artist} · GONE KRISTMAS`;
+document.querySelector("#player-art").src = media(tracks[current].art);
+playToggle.setAttribute("aria-label", `Play ${tracks[current].title}`);
+
+document
+  .querySelector("[data-share-album]")
+  .addEventListener("click", async () => {
+    const url = "https://kp.aisp.live/";
+    const status = document.querySelector("#share-status");
+    try {
+      if (navigator.share)
+        await navigator.share({
+          title: "Gone Kristmas — PRESET RECORDS",
+          text: "The holidays have gone Kountry. Listen to the 12-track album.",
+          url,
+        });
+      else {
+        await navigator.clipboard.writeText(url);
+        status.textContent =
+          "Album link copied. Share a little holiday spirit.";
+        document.querySelector("[data-share-album]").textContent =
+          "LINK COPIED ✓";
+      }
+    } catch (error) {
+      if (error.name !== "AbortError") {
+        status.classList.remove("sr-only");
+        status.textContent = `Share the album: ${url}`;
+      }
+    }
+  });
 
 function renderReleases() {
   document.querySelector("#release-grid").innerHTML = tracks
@@ -143,6 +228,8 @@ function setFilter(value) {
 }
 
 async function playTrack(index, toggle = true) {
+  if (!tracks[index] || (!tracks[index].file && !tracks[index].audioUrl))
+    return;
   const ticket = ++request;
   if (
     index === current &&
@@ -158,9 +245,12 @@ async function playTrack(index, toggle = true) {
   if (index !== current || !audio.getAttribute("src")) {
     current = index;
     const track = tracks[index];
-    audio.src = media(track.file);
+    audio.src = track.audioUrl || media(track.file);
     document.querySelector("#player-title").textContent = track.title;
-    document.querySelector("#player-artist").textContent = track.artist;
+    document.querySelector("#player-artist").textContent =
+      track.group === "holiday"
+        ? `${track.artist} · GONE KRISTMAS`
+        : track.artist;
     document.querySelector("#player-art").src = media(track.art);
     document.querySelector("#elapsed").textContent = "0:00";
     document.querySelector("#duration").textContent = "—:—";
@@ -169,7 +259,7 @@ async function playTrack(index, toggle = true) {
       navigator.mediaSession.metadata = new MediaMetadata({
         title: track.title,
         artist: track.artist,
-        album: "PRESET RECORDS",
+        album: track.group === "holiday" ? "Gone Kristmas" : "PRESET RECORDS",
         artwork: [
           {
             src: new URL(media(track.art), location.href).href,
@@ -179,12 +269,17 @@ async function playTrack(index, toggle = true) {
       });
   }
   document.querySelector("#player-status").textContent = "";
+  document.querySelector("#holiday-playback-status").textContent = "";
   try {
     await audio.play();
   } catch (error) {
-    if (ticket === request && error.name !== "AbortError")
+    if (ticket === request && error.name !== "AbortError") {
       document.querySelector("#player-status").textContent =
         "Playback could not start. Please press play to try again.";
+      if (tracks[current].group === "holiday")
+        document.querySelector("#holiday-playback-status").textContent =
+          "This stream could not start. Try play again, or use the arrow beside the song to listen on Bagpipes.";
+    }
   }
 }
 function syncPlayer() {
@@ -197,10 +292,39 @@ function syncPlayer() {
     .querySelector(".player")
     .classList.toggle("is-playing", !audio.paused);
   renderReleases();
+  document.querySelectorAll(".holiday-track").forEach((row) => {
+    const index = Number(row.dataset.trackIndex);
+    const playing = current === index && !audio.paused;
+    row.classList.toggle("is-playing", playing);
+    row.querySelector(".holiday-track-icon").textContent = playing ? "Ⅱ" : "▶";
+    row
+      .querySelector("button")
+      .setAttribute(
+        "aria-label",
+        `${playing ? "Pause" : "Play"} ${tracks[index].title}`,
+      );
+  });
+  document
+    .querySelectorAll("[data-album-play]")
+    .forEach((button) =>
+      button.setAttribute(
+        "aria-label",
+        current === holidayStart && !audio.paused
+          ? "Pause album playback"
+          : "Play Gone Kristmas from the beginning",
+      ),
+    );
 }
 function nextTrack(direction) {
   const playable = tracks
-    .map((t, i) => (t.file ? i : -1))
+    .map((t, i) =>
+      (t.file || t.audioUrl) &&
+      (tracks[current].group === "holiday"
+        ? t.group === "holiday"
+        : t.group !== "holiday")
+        ? i
+        : -1,
+    )
     .filter((i) => i >= 0);
   const index =
     (playable.indexOf(current) + direction + playable.length) % playable.length;
@@ -217,6 +341,9 @@ audio.addEventListener("ended", () => nextTrack(1));
 audio.addEventListener("error", () => {
   document.querySelector("#player-status").textContent =
     "This track could not load. Try another track or reload the page.";
+  if (tracks[current].group === "holiday")
+    document.querySelector("#holiday-playback-status").textContent =
+      "The stream is unavailable right now. Try another track or open the official song page using its arrow.";
 });
 audio.addEventListener("loadedmetadata", () => {
   document.querySelector("#duration").textContent = time(audio.duration);

@@ -2,6 +2,14 @@
 
 An independent record-label showcase for **Kountry Folk** and **PRESET**. Built with Vite, plain JavaScript, and responsive CSS. No backend, tracking, API keys, or paid services required.
 
+## Featured release: Gone Kristmas
+
+The homepage now leads with the official 12-track Bagpipes holiday album. `src/holiday-data.json` preserves the published release order, original source titles, track credits, audio URLs, and verified edition status. `tools/prepare_holiday.py` refreshes that snapshot from public Bagpipes queries and optimizes the artwork. The decorative ` -.-` title suffix is omitted in the display titles only.
+
+The shared player streams the official public Bagpipes MP3s on demand. Next/previous and automatic advance stay within the holiday album when a holiday song is selected; selecting an original release switches back to the original catalog queue. No holiday NFT purchase is claimed: all 12 edition lookups returned null at inspection. Each song and the album link directly to their official Bagpipes pages.
+
+The public address is **https://kp.aisp.live/**. Currently the domain serves a third-party forwarding frameset embedding this GitHub Pages site; it is not a GitHub Pages custom domain. Updates to this repo appear inside that frame. For native mobile viewport behavior and reliable holiday social previews/search indexing, replace masked forwarding with a DNS CNAME and configure the Pages custom domain (steps below). The outer forwarding page's metadata cannot be updated from this repository. Do not add a `CNAME` file or change Pages' domain before the DNS switch is ready.
+
 ## Run
 
 ```sh
@@ -13,7 +21,7 @@ Production: `npm run build`; test production locally with `npm run preview`.
 
 ## Included
 
-- Warm, personal hero using the owner's real portrait, with a subtly keyed green-screen background. Country artwork stays with the music and Kountry Folk persona.
+- Holiday-first hero with official album art, 12-track listening panel, album sharing, and a quick directory to the complete existing site. Real creator portraits remain in the artist and story sections.
 - Six full playable tracks, artist filters, persistent audio transport, seek/volume controls, automatic next track, and Media Session integration.
 - Diesel n’ Diamonds and Hard Work YouTube films, loaded on click in an accessible modal.
 - Label story and two artist profiles.

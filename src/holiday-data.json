@@ -1,0 +1,152 @@
+{
+  "name": "Gone Kristmas",
+  "artist": "Kountry Folk",
+  "url": "https://bagpipes.studio/album/gone-kristmas",
+  "cover": "gone-kristmas.webp",
+  "tracks": [
+    {
+      "title": "One Cup of Coco",
+      "sourceTitle": "One Cup of Coco -.-",
+      "artist": "PRESET",
+      "group": "holiday",
+      "audioUrl": "https://pub-26edc6df703a4e58a6d228cb5040a8e0.r2.dev/audio/k977nfwcb1g3mcnemdyn20fhzx84pz0x/1793070009876-fur5j2.mp3",
+      "art": "kristmas-01.webp",
+      "duration": 223.0,
+      "bagpipesSlug": "one-cup-of-coco",
+      "nftEdition": false,
+      "tokenId": null
+    },
+    {
+      "title": "Holiday Heyday",
+      "sourceTitle": "Holiday Heyday -.-",
+      "artist": "PRESET",
+      "group": "holiday",
+      "audioUrl": "https://pub-26edc6df703a4e58a6d228cb5040a8e0.r2.dev/audio/k977nfwcb1g3mcnemdyn20fhzx84pz0x/1793045130158-uq6x30.mp3",
+      "art": "kristmas-02.webp",
+      "duration": 236.0,
+      "bagpipesSlug": "holiday-heyday-2",
+      "nftEdition": false,
+      "tokenId": null
+    },
+    {
+      "title": "World Turn to White",
+      "sourceTitle": "World Turn to White -.-",
+      "artist": "PRESET",
+      "group": "holiday",
+      "audioUrl": "https://pub-26edc6df703a4e58a6d228cb5040a8e0.r2.dev/audio/k977nfwcb1g3mcnemdyn20fhzx84pz0x/1793062282016-ma5llt.mp3",
+      "art": "kristmas-03.webp",
+      "duration": 216.0,
+      "bagpipesSlug": "world-turn-to-white-2",
+      "nftEdition": false,
+      "tokenId": null
+    },
+    {
+      "title": "Family Again",
+      "sourceTitle": "Family Again -.-",
+      "artist": "PRESET",
+      "group": "holiday",
+      "audioUrl": "https://pub-26edc6df703a4e58a6d228cb5040a8e0.r2.dev/audio/k977nfwcb1g3mcnemdyn20fhzx84pz0x/1793046007758-sndat3.mp3",
+      "art": "kristmas-04.webp",
+      "duration": 263.0,
+      "bagpipesSlug": "family-again-2",
+      "nftEdition": false,
+      "tokenId": null
+    },
+    {
+      "title": "Rock This Winter Sky",
+      "sourceTitle": "Rock This Winter Sky  -.-",
+      "artist": "PRESET",
+      "group": "holiday",
+      "audioUrl": "https://pub-26edc6df703a4e58a6d228cb5040a8e0.r2.dev/audio/k977nfwcb1g3mcnemdyn20fhzx84pz0x/1793120292211-icbcyn.mp3",
+      "art": "kristmas-05.webp",
+      "duration": 222.0,
+      "bagpipesSlug": "rock-this-winter-sky-2",
+      "nftEdition": false,
+      "tokenId": null
+    },
+    {
+      "title": "More Than Enough",
+      "sourceTitle": "More Than Enough -.-",
+      "artist": "PRESET",
+      "group": "holiday",
+      "audioUrl": "https://pub-26edc6df703a4e58a6d228cb5040a8e0.r2.dev/audio/k977nfwcb1g3mcnemdyn20fhzx84pz0x/1793070114445-4ad4fa.mp3",
+      "art": "kristmas-06.webp",
+      "duration": 263.0,
+      "bagpipesSlug": "more-than-enough-2",
+      "nftEdition": false,
+      "tokenId": null
+    },
+    {
+      "title": "The First Light",
+      "sourceTitle": "The First Light -.-",
+      "artist": "PRESET",
+      "group": "holiday",
+      "audioUrl": "https://pub-26edc6df703a4e58a6d228cb5040a8e0.r2.dev/audio/k977nfwcb1g3mcnemdyn20fhzx84pz0x/1793070071397-wy7138.mp3",
+      "art": "kristmas-07.webp",
+      "duration": 284.0,
+      "bagpipesSlug": "the-first-light-2",
+      "nftEdition": false,
+      "tokenId": null
+    },
+    {
+      "title": "Holiday Hoe-down",
+      "sourceTitle": "Holiday Hoe-down -.-",
+      "artist": "PRESET",
+      "group": "holiday",
+      "audioUrl": "https://pub-26edc6df703a4e58a6d228cb5040a8e0.r2.dev/audio/k977nfwcb1g3mcnemdyn20fhzx84pz0x/1793069873546-jijy6i.mp3",
+      "art": "kristmas-08.webp",
+      "duration": 203.0,
+      "bagpipesSlug": "holiday-hoe-down-2",
+      "nftEdition": false,
+      "tokenId": null
+    },
+    {
+      "title": "Every Road's A Song",
+      "sourceTitle": "Every Road's A Song -.-",
+      "artist": "PRESET",
+      "group": "holiday",
+      "audioUrl": "https://pub-26edc6df703a4e58a6d228cb5040a8e0.r2.dev/audio/k977nfwcb1g3mcnemdyn20fhzx84pz0x/1793069820906-1pd3mr.mp3",
+      "art": "kristmas-09.webp",
+      "duration": 220.0,
+      "bagpipesSlug": "every-road-s-a-song-2",
+      "nftEdition": false,
+      "tokenId": null
+    },
+    {
+      "title": "Holiday Glow",
+      "sourceTitle": "Holiday Glow -.-",
+      "artist": "PRESET",
+      "group": "holiday",
+      "audioUrl": "https://pub-26edc6df703a4e58a6d228cb5040a8e0.r2.dev/audio/k977nfwcb1g3mcnemdyn20fhzx84pz0x/1793069216986-7v3h5o.mp3",
+      "art": "kristmas-10.webp",
+      "duration": 222.0,
+      "bagpipesSlug": "holiday-glow-2",
+      "nftEdition": false,
+      "tokenId": null
+    },
+    {
+      "title": "Right Where We Belong",
+      "sourceTitle": "Right Where We Belong -.-",
+      "artist": "PRESET",
+      "group": "holiday",
+      "audioUrl": "https://pub-26edc6df703a4e58a6d228cb5040a8e0.r2.dev/audio/k977nfwcb1g3mcnemdyn20fhzx84pz0x/1793069427560-0079ac.mp3",
+      "art": "kristmas-11.webp",
+      "duration": 276.0,
+      "bagpipesSlug": "right-where-we-belong-2",
+      "nftEdition": false,
+      "tokenId": null
+    },
+    {
+      "title": "Somebody's Light",
+      "sourceTitle": "Somebody's Light -.-",
+      "artist": "PRESET",
+      "group": "holiday",
+      "audioUrl": "https://pub-26edc6df703a4e58a6d228cb5040a8e0.r2.dev/audio/k977nfwcb1g3mcnemdyn20fhzx84pz0x/1793068319275-ieypcz.mp3",
+      "art": "kristmas-12.webp",
+      "duration": 264.0,
+      "bagpipesSlug": "somebody-s-light-2",
+      "nftEdition": false,
+      "tokenId": null
+    }
+  ]
+}
