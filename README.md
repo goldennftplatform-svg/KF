@@ -22,7 +22,7 @@ Production: `npm run build`; test production locally with `npm run preview`.
 ## Included
 
 - Holiday-first hero with official album art, 12-track listening panel, album sharing, and a quick directory to the complete existing site. Real creator portraits remain in the artist and story sections.
-- Six full playable tracks, artist filters, persistent audio transport, seek/volume controls, automatic next track, and Media Session integration.
+- Eight full playable original-catalog tracks (including the new PRESET releases Lockstep and Fragmented), artist filters, persistent audio transport, seek/volume controls, automatic next track, and Media Session integration, alongside the 12-track holiday album.
 - Diesel n’ Diamonds and Hard Work YouTube films, loaded on click in an accessible modal.
 - Label story and two artist profiles.
 - Personal camera-roll section with the owner-supplied Steve Largent event photo and a candid headphones portrait.

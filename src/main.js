@@ -78,6 +78,30 @@ const tracks = [
     note: "WATCH THE MUSIC VIDEO",
     video: "m83cjSP6rQE",
   },
+  {
+    title: "Lockstep",
+    artist: "PRESET",
+    group: "preset",
+    file: "lockstep.mp3",
+    art: "lockstep.webp",
+    style: "official-art",
+    originalArtwork: true,
+    note: "NEW RELEASE",
+    bagpipesSlug: "lockstep",
+    nftEdition: false,
+  },
+  {
+    title: "Fragmented",
+    artist: "PRESET",
+    group: "preset",
+    file: "fragmented.mp3",
+    art: "fragmented.webp",
+    style: "official-art",
+    originalArtwork: true,
+    note: "NEW RELEASE",
+    bagpipesSlug: "fragmented",
+    nftEdition: false,
+  },
 ];
 const holidayStart = tracks.length;
 tracks.push(...holiday.tracks);
@@ -183,7 +207,7 @@ function renderReleases() {
   document.querySelector("#release-grid").innerHTML = tracks
     .map((track, index) =>
       track.group === filter
-        ? `<article class="release-card"><button class="cover ${track.style}" ${track.file ? `data-play="${index}" aria-label="Play ${track.title}"` : `data-video="${track.video}" data-title="${track.title}" aria-label="Watch ${track.title}"`}><img src="${media(track.art)}" alt="${track.title} artwork" loading="lazy" />${index === 0 ? "" : `<span class="cover-label">${track.artist}<span>PRESET RECORDS</span></span><span class="cover-type">${track.title}</span><span class="cover-bottom">${track.note} <span>PR—00${index + 1}</span></span>`}<span class="cover-play" aria-hidden="true">${current === index && !audio.paused ? "Ⅱ" : "↗"}</span></button><div class="release-meta"><div><h3>${track.title}</h3><p>${track.artist} <span>•</span> ${track.file ? "SINGLE" : "VIDEO"}</p></div><button class="track-button" ${track.file ? `data-play="${index}" aria-label="${current === index && !audio.paused ? "Pause" : "Play"} ${track.title}"` : `data-video="${track.video}" data-title="${track.title}" aria-label="Watch ${track.title}"`}>${current === index && !audio.paused ? "Ⅱ" : "▶"}</button></div></article>`
+        ? `<article class="release-card"><button class="cover ${track.style}" ${track.file ? `data-play="${index}" aria-label="Play ${track.title}"` : `data-video="${track.video}" data-title="${track.title}" aria-label="Watch ${track.title}"`}><img src="${media(track.art)}" alt="${track.title} artwork" loading="lazy" />${index === 0 || track.originalArtwork ? "" : `<span class="cover-label">${track.artist}<span>PRESET RECORDS</span></span><span class="cover-type">${track.title}</span><span class="cover-bottom">${track.note} <span>PR—00${index + 1}</span></span>`}<span class="cover-play" aria-hidden="true">${current === index && !audio.paused ? "Ⅱ" : "↗"}</span></button><div class="release-meta"><div><h3>${track.title}</h3><p>${track.artist} <span>•</span> ${track.file ? "SINGLE" : "VIDEO"}</p></div><button class="track-button" ${track.file ? `data-play="${index}" aria-label="${current === index && !audio.paused ? "Pause" : "Play"} ${track.title}"` : `data-video="${track.video}" data-title="${track.title}" aria-label="Watch ${track.title}"`}>${current === index && !audio.paused ? "Ⅱ" : "▶"}</button></div></article>`
         : "",
     )
     .join("");
@@ -223,7 +247,7 @@ function setFilter(value) {
   document.querySelector(".heading-aside > p").innerHTML =
     value === "kountry"
       ? "Four tracks. One hell of an introduction.<br />Find your backroad anthem."
-      : "Another side of the same original.<br />Two tracks. One music film. No limits.";
+      : "Fresh in the mix: Lockstep & Fragmented.<br />Four tracks. One music film. No limits.";
   renderReleases();
 }
 

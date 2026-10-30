@@ -1,5 +1,9 @@
 # Asset provenance
 
+## New PRESET releases
+
+“Lockstep” (`https://bagpipes.studio/track/lockstep`) and “Fragmented” (`https://bagpipes.studio/track/fragmented`) were verified as the two newest published PRESET tracks on 2026-10-30. `tools/prepare_new_releases.py` reads their public track records, optimizes their official artwork to `lockstep.webp` / `fragmented.webp`, and converts the exact release audio to 160 kbps MP3s for on-site playback. Neither edition lookup returned an NFT, so their links point to the song pages without promising a purchase. These tracks join the original-catalog playback queue, separate from the Gone Kristmas album.
+
 ## Gone Kristmas holiday feature
 
 The official published collection `https://bagpipes.studio/album/gone-kristmas` was read using Bagpipes' public `collections:getCollectionBySlug` query. The 12-track sequence, original titles, PRESET track credits, durations, and public audio URLs are preserved in `src/holiday-data.json`. The album artist is Kountry Folk; its artwork reads “Kristmas Goes Kountry.” The page uses the official collection name **Gone Kristmas**, and the art's wording as a supporting tagline.
